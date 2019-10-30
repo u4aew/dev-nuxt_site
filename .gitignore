@@ -1,0 +1,16 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# idea
+.idea
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+# Alias for idea
+webpack.config.js
