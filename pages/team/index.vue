@@ -13,7 +13,7 @@
     export default {
         loading: true,
         async asyncData(context) {
-            const data = await context.$axios.$get(`${process.env.apiUrl}/content/`, {
+            const data = await context.$axios.$get(`${process.env.API_URL}/content/`, {
                 params: {
                     city: 'barnaul'
                 }

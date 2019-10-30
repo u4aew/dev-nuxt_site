@@ -22,7 +22,9 @@
     export default {
         loading: true,
         async asyncData({store, $axios,}) {
-            const {content} = await $axios.$get(`${process.env.apiUrl}/news/`, {
+
+            console.log(process.env.apiUrl)
+            const {content} = await $axios.$get(`${process.env.API_URL}/news/`, {
                 params: {
                     city: store.state.city.code
                 }
