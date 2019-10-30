@@ -22,7 +22,7 @@
     export default {
         loading: true,
         async asyncData(context) {
-            const {content} = await context.$axios.$get(`${context.env.apiUrl}/about/`);
+            const {content} = await context.$axios.$get(`${process.env.apiUrl}/about/`);
             return {content}
             // called every time before loading the component
             // as the name said, it can be async
