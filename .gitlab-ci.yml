@@ -5,4 +5,4 @@ deploy-job:
   tags:
     - site
   stage: deploy
-  script: npm install && npm run-script build && /usr/bin/cp -r -u --force dist/* /var/www/html/site
+  script: npm install && npm run-script build
