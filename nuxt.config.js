@@ -1,3 +1,5 @@
+const env = require("dotenv").config()
+
 module.exports = {
   /*
   ** Headers of the page
@@ -53,8 +55,5 @@ module.exports = {
       './assets/style/common.styl'
     ]
   },
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    apiUrl: process.env.API_URL || 'http://localhost:4000/api'
-  }
+  env: env.parsed
 };

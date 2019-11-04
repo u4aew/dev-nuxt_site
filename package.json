@@ -5,9 +5,9 @@
   "author": "uchaev.s <dialoggg1994@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "cross-env BASE_URL=http://localhost:3000 API_URL=http://localhost:4000/api nuxt",
+    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "cross-env BASE_URL=http://dev-nuxt.ru API_URL=http://dev-nuxt.ru/api nuxt start",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
@@ -21,6 +21,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.4.3",
     "stylus": "^0.54.7",
+    "dotenv": "^8.2.0",
     "stylus-loader": "^3.0.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^4.19.1",
