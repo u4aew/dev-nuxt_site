@@ -5,4 +5,4 @@ deploy-job:
   tags:
     - site
   stage: deploy
-  script: npm i
+  script: ls
