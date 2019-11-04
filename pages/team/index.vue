@@ -2,7 +2,7 @@
   <div class="block">
     <div class="block-wrapper">
       {{data.content.desc}}
-      dasda
+      dasda hkjk
       <br>
       <nuxt-link to="/">Домой</nuxt-link>
     </div>
