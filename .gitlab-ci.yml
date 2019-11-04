@@ -5,4 +5,4 @@ deploy-job:
   tags:
     - site
   stage: deploy
-  script: npm install && npm run-script build
+  script: rm -f app.zip && zip app.zip * && cp app.zip /var/www/html/app && unzip /var/www/html/app/app.zip

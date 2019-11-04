@@ -55,5 +55,5 @@ module.exports = {
       './assets/style/common.styl'
     ]
   },
-  env: env.parsed
+  env: {...env.parsed}
 };
