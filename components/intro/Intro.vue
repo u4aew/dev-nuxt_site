@@ -6,7 +6,7 @@
           Ломприём dfsfd asdadasasd dfsffddsf 999
         </h1>
       </div>
-      <div class="intro__desc">
+      <div class="intro__desc"> dsfds
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </div>
     </div>
