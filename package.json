@@ -14,9 +14,10 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
+    "dotenv": "^8.2.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
-    "dotenv": "^8.2.0"
+    "nuxt-start": "^2.10.2"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
