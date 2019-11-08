@@ -8,6 +8,7 @@
       </div>
       <div class="intro__desc"> dsfds
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Ваш ip {{$store.state.ip}}
       </div>
     </div>
   </div>
