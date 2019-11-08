@@ -18,7 +18,13 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit({commit}, {req, env, $axios}) {
     const ip = req.headers['x-real-ip'] || req.connection.remoteAddress;
-    const params = await $axios.$get(`${process.env.GEO_API_URL}/${ip}`);
+    console.log(ip)
+    console.log(`${process.env.API_URL}/info-api/`)
+    const params = await $axios.$get(`${process.env.API_URL}/info-ip/`, {
+      params: {
+        ip
+      }
+    });
     console.log(params, 'data')
     commit('SET_CITY', CityHelper.getCity(req, env));
 
