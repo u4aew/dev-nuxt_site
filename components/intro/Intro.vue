@@ -3,12 +3,13 @@
     <div class="intro__wrapper">
       <div class="intro__title">
         <h1 class="title-h1">
-          Title еее
+          Title
         </h1>
       </div>
       <div class="intro__desc"> dsfds
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Ваш ip {{$store.state.ip}}
+        <br>
+        <br>
         <br>
         Ваши данные {{$store.state.cityInfo}}
       </div>
