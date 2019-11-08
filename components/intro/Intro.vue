@@ -6,7 +6,7 @@
           Title
         </h1>
       </div>
-      <div class="intro__desc"> dsfds
+      <div class="intro__desc">
         Ваш ip {{$store.state.ip}}
         <br>
         <br>
