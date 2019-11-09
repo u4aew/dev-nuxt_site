@@ -42,10 +42,14 @@ module.exports = {
       }
     }
   },
+  router: {
+    middleware: 'city'
+  },
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'cookie-universal-nuxt'
   ],
   css: [
     'normalize.css/normalize.css'
