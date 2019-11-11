@@ -13,24 +13,29 @@
               <div class="header__nav">
                 <div class="header__nav-list">
                   <div class="header__nav-item">
-                    <a href="" class="header__nav-link">
-                      Пункты приёма
+                    <a href="#" class="header__nav-link">
+                      Цветной металлолом
                     </a>
                   </div>
                   <div class="header__nav-item">
-                    <a href="" class="header__nav-link">
-                      Вывоз лома
+                    <a href="#" class="header__nav-link">
+                      Черный металлолом
+                    </a>
+                  </div>
+                  <div class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                      Цены
                     </a>
                   </div>
                   <div class="header__nav-item">
                     <nuxt-link to="/news" class="header__nav-link">
-                      Новости
+                      Статьи
                     </nuxt-link>
                   </div>
                   <div class="header__nav-item">
-                    <nuxt-link to="/about" class="header__nav-link">
-                      О нас
-                    </nuxt-link>
+                    <a href="#" class="header__nav-link">
+                      Калькулятор цен
+                    </a>
                   </div>
                 </div>
               </div>
