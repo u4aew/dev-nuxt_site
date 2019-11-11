@@ -5,11 +5,11 @@
         <div class="page-common__wrapper">
           <div class="page-common__header">
             <h1 class="title-1">
-              Новости
+              Статьи
             </h1>
           </div>
           <div class="page-common__body">
-            {{content}}
+            {{articles}}
           </div>
         </div>
       </div>
@@ -24,15 +24,12 @@
         async asyncData({store, $axios,}) {
 
             console.log(process.env.API_URL)
-            const {content} = await $axios.$get(`${process.env.API_URL}/news/`, {
+            const articles = await $axios.$get(`${process.env.API_URL}/articles/`, {
                 params: {
                     city: store.state.city.code
                 }
             });
-            return {content}
-            // called every time before loading the component
-            // as the name said, it can be async
-            // Also, the returned object will be merged with your data object
+            return {articles}
         },
         mounted() {
             this.loading = false

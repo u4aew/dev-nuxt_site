@@ -28,7 +28,7 @@
                     </a>
                   </div>
                   <div class="header__nav-item">
-                    <nuxt-link to="/news" class="header__nav-link">
+                    <nuxt-link to="/articles" class="header__nav-link">
                       Статьи
                     </nuxt-link>
                   </div>
