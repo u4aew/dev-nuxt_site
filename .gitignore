@@ -15,5 +15,3 @@ npm-debug.log
 
 # Nuxt generate
 dist
-# Alias for idea
-webpack.config.js
