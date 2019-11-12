@@ -5,7 +5,7 @@
         <div class="page-common__wrapper">
           <div class="page-common__header">
             <h1 class="title-1">
-              Статьи
+              Статьи sss
             </h1>
           </div>
           <div class="page-common__body">
