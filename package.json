@@ -12,7 +12,8 @@
     "site:precommit": "npm run lint",
     "site:start": "nuxt start",
     "site:test": "jest",
-    "api:run": "node api/server.js"
+    "api:start": "node api/server.js",
+    "api:dev": "nodemon api/server.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
