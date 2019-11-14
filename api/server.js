@@ -18,7 +18,7 @@ app.get('/api/articles/', (req, res) => {
 
 app.get('/api/article/', (req, res) => {
     const slug = req.query.slug;
-    const fileContent = fs.readFileSync(`${__dirname}/mappings/articles/${slug}.json`, "utf8");
+    const fileContent = fs.readFileSync(`${__dirname}/mappings/common/articles/${slug}.json`, "utf8");
     return res.json(fileContent);
 });
 

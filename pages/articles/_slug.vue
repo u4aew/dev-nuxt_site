@@ -5,11 +5,11 @@
         <div class="page-common__wrapper">
           <div class="page-common__header">
             <h1 class="title-1">
-              Статьи sss
+              {{article.title}}
             </h1>
           </div>
           <div class="page-common__body">
-            {{articles}}
+            {{article.desc}}
           </div>
         </div>
       </div>
@@ -21,15 +21,13 @@
 <script>
     export default {
         loading: true,
-        async asyncData({store, $axios,}) {
-
-            console.log(process.env.API_URL)
-            const articles = await $axios.$get(`${process.env.API_URL}/articles/`, {
+        async asyncData({$axios, route}) {
+            const article = await $axios.$get(`${process.env.API_URL}/article/`, {
                 params: {
-                    city: store.state.city.code
+                    slug: route.params.slug
                 }
             });
-            return {articles}
+            return {article:JSON.parse(article)}
         },
         mounted() {
             this.loading = false
