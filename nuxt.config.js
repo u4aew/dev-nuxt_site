@@ -43,7 +43,7 @@ module.exports = {
     }
   },
   router: {
-    middleware: 'city'
+    middleware: 'redirect-to-city'
   },
   modules: [
     '@nuxtjs/style-resources',

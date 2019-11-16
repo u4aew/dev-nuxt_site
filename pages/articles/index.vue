@@ -8,10 +8,10 @@
               Статьи
             </h1>
           </div>
-          <div v-if="articlePreviewList.articles.length" class="page-common__body">
+          <div v-if="articlePreviewList.length" class="page-common__body">
             <div class="ui-list">
               <div class="ui-list__list">
-                <div  v-for="(article, key) in articlePreviewList.articles" class="ui-list__list-item" :key="`article-preview-${key}`">
+                <div  v-for="(article, key) in articlePreviewList" class="ui-list__list-item" :key="`article-preview-${key}`">
                   <ArticlePreview :model="article" />
                 </div>
               </div>
@@ -26,8 +26,6 @@
 </template>
 
 <script>
-    import ArticlePreviewList from '@/models/article/article-preview-list'
-
     import ArticlePreview from '@/components/articles/article-preview/ArticlePreview'
 
     export default {
@@ -37,8 +35,8 @@
         },
         loading: true,
         async asyncData({$axios,}) {
-            const articles = await $axios.$get(`${process.env.API_URL}/articles/`);
-            return { articlePreviewList: new ArticlePreviewList(JSON.parse(articles)) }
+            const articlePreviewList = await $axios.$get(`${process.env.API_URL}/articles/`);
+            return { articlePreviewList: JSON.parse(articlePreviewList) }
         },
         mounted() {
             this.loading = false

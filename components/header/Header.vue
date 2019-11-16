@@ -46,7 +46,7 @@
           <div class="header__actions">
             <div class="header__actions-list">
               <div class="header__actions-item">
-                {{$store.state.city.name}}
+<!--                {{$store.state.city.name}}-->
               </div>
             </div>
           </div>

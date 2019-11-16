@@ -7,11 +7,8 @@
         </h1>
       </div>
       <div class="intro__desc">
-        Ваш ip {{$store.state.ip}}
+        Ваш ip {{$store.state.session.ipInfo}}
         <br>
-        <br>
-        <br>
-        Ваши данные {{$store.state.cityInfo}}
       </div>
     </div>
   </div>
@@ -19,7 +16,12 @@
 
 <script>
     export default {
-        name: 'Intro'
+        name: 'Intro',
+        methods: {
+            test () {
+                this.$store.dispatch('todos/ADD', 'sdasad')
+            }
+        }
     }
 </script>
 
