@@ -1,4 +1,4 @@
-const env = require("dotenv").config()
+const env = require("dotenv").config();
 
 module.exports = {
   /*
@@ -26,10 +26,14 @@ module.exports = {
   /*
   ** Build configuration
   */
+  plugins: ['~plugins/vue-core-plugin-initializer.js'],
   build: {
     /*
     ** Run ESLint on save
     */
+    babel: {
+      plugins: ['@babel/plugin-transform-runtime'],
+    },
     extractCSS: true,
     extend(config, {isDev, isClient}) {
       if (isDev && isClient) {

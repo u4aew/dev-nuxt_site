@@ -5,7 +5,10 @@
         <div class="page-common__wrapper">
           <div class="page-common__header">
             <h1 class="title-1">
-              Статьи
+              Статьи sdasd
+              <br>
+              {{ test }}
+              <br>
             </h1>
           </div>
           <div v-if="articlePreviewList.length" class="page-common__body">
@@ -15,8 +18,7 @@
                   <ArticlePreview :model="article" />
                 </div>
               </div>
-            </div>
-
+            </div>s
           </div>
         </div>
       </div>
@@ -33,13 +35,21 @@
         components: {
             ArticlePreview
         },
-        loading: true,
-        async asyncData({$axios,}) {
-            const articlePreviewList = await $axios.$get(`${process.env.API_URL}/articles/`);
-            return { articlePreviewList: JSON.parse(articlePreviewList) }
+        data () {
+            return {
+                test2: null
+            }
         },
-        mounted() {
-            this.loading = false
+        loading: true,
+        async asyncData({$axios,app}) {
+            const articlePreviewList = await $axios.$get(`${process.env.API_URL}/articles/`);
+            return { articlePreviewList: JSON.parse(articlePreviewList), test: app.$i18n }
+        },
+        beforeMount () {
+            this.loading = false;
+            console.log(this.test);
+            this.test2 = this.test;
+            console.log(this.test2)
         }
     }
 </script>
