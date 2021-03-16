@@ -9,7 +9,7 @@
             </h1>
           </div>
           <div class="page-common__body">
-            {{content}}
+            {{ JSON.stringify(res) }}
           </div>
         </div>
       </div>
@@ -19,21 +19,14 @@
 </template>
 
 <script>
-    export default {
-        loading: true,
-        async asyncData({store, $axios, env}) {
-            const {content} = await $axios.$get(`${env.apiUrl}/news/`, {
-                params: {
-                    city: store.state.city.code
-                }
-            });
-            return {content}
-            // called every time before loading the component
-            // as the name said, it can be async
-            // Also, the returned object will be merged with your data object
-        },
-        mounted() {
-            this.loading = false
-        }
-    }
+export default {
+  loading: true,
+  async asyncData({store, $axios, env}) {
+    const res = await $axios.$get(`${env.apiUrl}/posts`);
+    return {res}
+  },
+  mounted() {
+    this.loading = false
+  }
+}
 </script>

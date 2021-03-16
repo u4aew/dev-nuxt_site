@@ -1,16 +1,18 @@
 import CityHelper from '~/plugins/helpers/server/city-helper'
 
 export const state = () => ({
-  city: []
+  city: [],
+  categories: []
 });
 
 export const mutations = {
-  SET_CITY(state, leads) {
-    state.city = leads
+  SET_CATEGORIES(state, leads) {
+    state.categories = leads
   }
 };
 export const actions = {
-  async nuxtServerInit({commit}, {req, env}) {
-    commit('SET_CITY', CityHelper.getCity(req, env))
+  async nuxtServerInit({commit}, {req, env, $axios}) {
+    const categories = await $axios.$get(`${env.apiUrl}/categories`);
+    commit('SET_CATEGORIES', categories)
   }
 };

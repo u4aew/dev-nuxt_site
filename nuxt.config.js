@@ -20,7 +20,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: {color: '#3B8070'},
+  loading: {color: 'red', height: '5px'},
   /*
   ** Build configuration
   */
@@ -54,7 +54,7 @@ module.exports = {
     ]
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    apiUrl: process.env.API_URL || 'http://localhost:4000/api'
+    baseUrl: process.env.BASE_URL || 'http://the-magazine.ru/wp-json/wp/v2',
+    apiUrl: process.env.API_URL || 'http://the-magazine.ru/wp-json/wp/v2'
   }
 };

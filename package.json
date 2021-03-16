@@ -7,13 +7,14 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "cross-env BASE_URL=http://dev-nuxt.ru API_URL=http://dev-nuxt.ru/api nuxt start",
+    "start": "cross-env BASE_URL=http://the-magazine.ru/wp-json/wp/v2 API_URL=http://the-magazine.ru/wp-json/wp/v2 nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
+    "cross-env": "^7.0.3",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0"
   },
