@@ -4,7 +4,7 @@
       <div class="app-body__header">
         <Header/>
       </div>
-      <div class="app-body__main">
+      <div class="app-body__content">
         <div class="app-content">
           <div class="app-content__sidebar">
             <Categories/>
@@ -21,6 +21,10 @@
     </div>
   </div>
 </template>
+
+<style lang="stylus">
+@import "../assets/style/common.styl"
+</style>
 
 <script>
 import Categories from "../components/categories/Categories";

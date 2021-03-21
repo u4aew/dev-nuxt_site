@@ -63,6 +63,7 @@ body {
 
   &__content {
     flex-grow 1
+    display flex
   }
 
   &__footer {
@@ -72,13 +73,23 @@ body {
 
 .app-content {
   display flex
+  max-width $block-max-width
+  margin 0 auto
+  flex 1
   &__sidebar {
-    width 260px
+    width 200px
+    padding-top 30px
   }
   &__main {
     flex 1
+    box-sizing border-box
+    padding-left 20px
+    padding-right 20px
   }
   &__additional {
-    width 130px
+    flex 1
+    max-width 300px
+    background-color $color-3
+    padding-top 15px
   }
 }

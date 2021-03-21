@@ -18,7 +18,3 @@
         name: 'Intro'
     }
 </script>
-
-<style lang="stylus">
-  @import "~assets/style/components/intro.styl";
-</style>

@@ -5,4 +5,4 @@ deploy-job:
   tags:
     - site
   stage: deploy
-  script: docker build -t my_app . && docker run -d -p 5000:5000 my_app
+  script: docker container stop nuxt_app && docker container rm nuxt_app && docker build --no-cache -t my_app . && docker run -d --name nuxt_app -p 5000:5000 my_app

@@ -1,0 +1,66 @@
+.topic {
+
+}
+
+
+.topic-header {
+  padding-bottom 20px
+  position relative
+
+  &:before {
+    content ''
+    position absolute
+    left -20px
+    right -20px
+    top 0
+    bottom 0
+    background-color $color-3
+    border-radius 0 0 0 10px
+  }
+  &__title {
+    use-size(16)
+    font-weight 700
+    text-transform uppercase
+    font-family $font-main
+  }
+
+  &__wrapper {
+    display flex
+    align-items center
+    position relative
+    border-bottom 1px solid $color-primary
+  }
+
+  &__main {
+    flex 1
+    padding-top 25px
+    padding-bottom 10px
+  }
+
+  &__side {
+    flex 0 0 auto
+  }
+
+  &__actions {
+    display flex
+    align-items center
+    margin 0 -15px
+    use-size(14)
+    &-item {
+      margin 0 15px
+      cursor pointer
+      position relative
+      padding-top 25px
+      padding-bottom 10px
+      border-bottom 2px solid transparent
+      box-sizing border-box
+      &.is-active {
+        border-bottom 2px solid $color-primary
+        pointer-events none
+      }
+      &:hover {
+        opacity 0.8
+      }
+    }
+  }
+}

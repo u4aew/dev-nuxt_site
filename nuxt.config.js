@@ -13,14 +13,14 @@ module.exports = {
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&family=Merriweather:wght@400;700&display=swap'
       }
     ]
   },
   /*
   ** Customize the progress bar color
   */
-  loading: {color: 'red', height: '5px'},
+  loading: {color: '#5F36BA', height: '5px'},
   /*
   ** Build configuration
   */

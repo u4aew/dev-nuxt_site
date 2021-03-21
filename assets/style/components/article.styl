@@ -1,0 +1,59 @@
+.article {
+  padding-top 30px
+  padding-bottom 30px
+  display block
+  color inherit !important
+  &__tags {
+    display flex
+    margin 0 -5px
+
+    &-item {
+      margin 0 5px
+      padding 3px 8px
+      background-color $color-3
+      color $color-secondary
+      border-radius 4px
+      use-size(12)
+      font-weight 700
+    }
+  }
+
+  &__additions {
+    color $color-4
+    use-size(12)
+    display flex
+    margin 0 -5px
+
+    &-item {
+      margin 0 5px
+    }
+  }
+
+  &__info {
+    color $color-4
+    use-size(12)
+    display flex
+    margin 0 -5px
+    margin-bottom 10px
+    &-item {
+      margin 0 5px
+    }
+  }
+  &__desc {
+    margin-bottom 10px
+  }
+  &__img {
+    margin-bottom 10px
+    img {
+      display block
+      max-width 100%
+      width 100%
+      object-fit cover
+      overflow hidden
+      border-radius 10px
+    }
+  }
+  &:hover {
+    opacity 0.8
+  }
+}

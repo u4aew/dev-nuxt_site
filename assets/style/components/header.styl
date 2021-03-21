@@ -1,12 +1,18 @@
 .header {
   padding-top 10px
   padding-bottom 10px
-  margin-bottom 30px
-  color white !important
-  background-color #556ADB
+  color white
+  background: linear-gradient(90deg, #51A1FF 12.94%, #CB8FF4 26.21%, #A5F4FF 41.35%, #89A2FA 60.65%, #6DAFFC 77.63%);
   min-height 48px
+
+  box-sizing border-box
   display flex
   align-items center
+  &__wrapper {
+    max-width 1850px
+    margin 0 auto
+    flex 1
+  }
   &__content {
     display flex
     margin-left -5px
@@ -23,14 +29,24 @@
       margin-right 5px
       margin-left 5px
       flex 1
+      max-width 1260px
     }
   }
 
   &__logo {
     display block
     color white
+    font-weight 700
+    use-size(20)
+    outline none
     img {
       display block
+    }
+    &:hover {
+      opacity 0.8
+    }
+    &:active {
+      opacity 0.6
     }
   }
 

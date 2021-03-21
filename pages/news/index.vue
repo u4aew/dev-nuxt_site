@@ -1,19 +1,14 @@
 <template>
-  <div class="block">
-    <div class="block-wrapper">
-      <div class="page-common">
-        <div class="page-common__wrapper">
-          <div class="page-common__header">
-            <h1 class="title-1">
-              Новости
-            </h1>
-          </div>
-          <div class="page-common__body">
-            {{ JSON.stringify(res) }}
-          </div>
-        </div>
+  <div class="page-common">
+    <div class="page-common__wrapper">
+      <div class="page-common__header">
+        <h1 class="title-1">
+          Новости
+        </h1>
       </div>
-      <br>
+      <div class="page-common__body">
+        {{ JSON.stringify(res) }}
+      </div>
     </div>
   </div>
 </template>

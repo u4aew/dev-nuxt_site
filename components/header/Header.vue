@@ -1,33 +1,31 @@
 <template>
-  <div class="header block">
-    <div class="header__wrapper block-wrapper">
+  <div class="header">
+    <div class="header__wrapper">
       <div class="header__content">
         <div class="header__content-main">
           <div class="header__info">
             <div class="header__info-side">
               <nuxt-link to="/" class="header__logo">
-                LOGO
+                <img src="../../assets/images/vendor/logo.svg" alt="">
               </nuxt-link>
             </div>
           </div>
         </div>
         <div class="header__content-side">
-          <div class="header__actions">
-            <div class="header__actions-list">
-              <div class="header__actions-item"></div>
-            </div>
-          </div>
+          <Search/>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<style lang="stylus">
-  @import "~assets/style/components/header.styl"
-</style>
 <script>
-    export default {
-        name: 'Header'
-    }
+
+import Search from "@/components/search/Search";
+
+export default {
+  name: 'Header',
+  components: {
+    Search
+  }
+}
 </script>

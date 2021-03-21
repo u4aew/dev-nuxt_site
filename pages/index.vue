@@ -1,13 +1,35 @@
 <template>
-  <div class="block">
-    <div class="block-wrapper">
-      {{ posts }}
+  <div class="topic">
+    <div class="topic__side">
+      <div class="topic-header">
+        <div class="topic-header__wrapper">
+          <div class="topic-header__main">
+            <h1 class="topic-header__title">
+                Новости
+            </h1>
+          </div>
+          <div class="topic-header__side">
+            <div class="topic-header__actions">
+              <div class="topic-header__actions-item is-active">Все</div>
+              <div class="topic-header__actions-item">Лучшее за неделю</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topic__main">
+      <template v-if="posts && posts.length > 0">
+        <ArticlePreview v-for="(item, key) in posts" :content="item" :key="key"/>
+      </template>
+      <template v-else>
+        Данные отсутствуют
+      </template>
     </div>
   </div>
 </template>
 
 <script>
-
+import ArticlePreview from "@/components/articles/ArticlePreview";
 export default {
   loading: true,
   async asyncData({store, $axios, env}) {
@@ -16,6 +38,9 @@ export default {
   },
   mounted() {
     this.loading = false
+  },
+  components: {
+    ArticlePreview
   }
 }
 </script>
