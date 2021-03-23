@@ -54,7 +54,7 @@ module.exports = {
     ]
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://the-magazine.ru/wp-json/wp/v2',
-    apiUrl: process.env.API_URL || 'https://the-magazine.ru/wp-json/wp/v2'
+    baseUrl: process.env.BASE_URL || 'https://the-magazine.ru',
+    apiUrl: process.env.API_URL || 'https://api.the-magazine.ru/wp-json/wp/v2'
   }
 };

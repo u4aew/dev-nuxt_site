@@ -12,7 +12,7 @@
 
       <div class="article__desc" v-html="content.excerpt.rendered"/>
       <div class="article__img">
-        <img :src="content.acf.cover.url">
+        <img :src="imgCover">
       </div>
       <div class="article__info">
         <div class="article__info-item">Евгения Севастьянова</div>
@@ -53,6 +53,13 @@ export default {
     },
     time() {
       return getRandomIntInclusive(1, 5)
+    },
+    imgCover() {
+      if (this.content.acf && this.content.acf.cover && this.content.acf.cover.url) {
+        return this.content.acf.cover.url
+      } else {
+        return ''
+      }
     }
   },
   methods: {
