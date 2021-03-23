@@ -1,5 +1,5 @@
 <template>
-  <div class="app-body">
+  <div class="app-body app-body_blog">
     <div class="app-body__wrapper">
       <div class="app-body__header">
         <Header/>
@@ -11,9 +11,6 @@
           </div>
           <div class="app-content__main">
             <nuxt/>
-          </div>
-          <div class="app-content__additional">
-            <WidgetNew/>
           </div>
         </div>
       </div>
@@ -30,7 +27,6 @@
 
 <script>
 import Categories from "../components/categories/Categories";
-import WidgetNew from "@/components/widgets/WidgetNew";
 import Header from '~/components/header/Header'
 import Footer from '~/components/footer/Footer'
 
@@ -38,8 +34,7 @@ export default {
   components: {
     Header,
     Footer,
-    Categories,
-    WidgetNew
+    Categories
   },
   loading: true,
   mounted() {

@@ -1,39 +1,23 @@
-.topic {
-
-}
-
-
 .topic-header {
-  padding-bottom 20px
+  padding-bottom 15px
   position relative
-
-  &:before {
-    content ''
-    position absolute
-    left -20px
-    right -20px
-    top 0
-    bottom 0
-    background-color $color-3
-    border-radius 0 0 0 10px
-  }
+  color $color-4
   &__title {
-    use-size(16)
+    use-size(20)
     font-weight 700
-    text-transform uppercase
-    font-family $font-main
+    font-family $font-title
+
   }
 
   &__wrapper {
     display flex
     align-items center
     position relative
-    border-bottom 1px solid $color-primary
   }
 
   &__main {
     flex 1
-    padding-top 25px
+    padding-top 20px
     padding-bottom 10px
   }
 
@@ -50,17 +34,27 @@
       margin 0 15px
       cursor pointer
       position relative
-      padding-top 25px
+      padding-top 20px
+      padding-right 5px
+      padding-left 5px
       padding-bottom 10px
       border-bottom 2px solid transparent
       box-sizing border-box
       &.is-active {
-        border-bottom 2px solid $color-primary
+        border-bottom 2px solid $color-primary-light
         pointer-events none
+        color $color-main
       }
       &:hover {
         opacity 0.8
       }
     }
+  }
+}
+
+
+.topic {
+  &__main {
+    margin-bottom 60px
   }
 }

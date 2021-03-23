@@ -1,9 +1,11 @@
 .categories {
-  use-size(20)
-  font-weight 700
+  use-size(18)
+  font-weight 500
+
   &__list {
     &-item {
-      margin-bottom 15px
+      margin-bottom 12px
+
       &:last-child {
         margin-bottom 0
       }
@@ -11,6 +13,32 @@
   }
 
   &__link {
+    display block
+    &_simple {
+      use-size(14)
+      color $color-4
+      font-weight 400
+    }
+  }
 
+  &__main {
+    padding-bottom 20px
+    margin-bottom  20px
+    box-sizing border-box
+    border-bottom 1px solid $color-5
+  }
+
+  &__side {
+
+  }
+  &__links {
+    display flex
+    flex-wrap wrap
+    margin 0 -10px
+    margin-bottom -10px
+    &-item {
+      margin 0 10px
+      margin-bottom 10px
+    }
   }
 }

@@ -1,44 +1,34 @@
 <template>
-  <nuxt-link to="/dasda" class="article">
+  <nuxt-link :to="`/${content.slug}`" class="article">
     <div class="article__wrapper">
       <div class="article__tags">
-        <div class="article__tags-item">
-          Новости
-        </div>
-        <div class="article__tags-item">
-          Бизнес
+        <div v-for="(item, key) in content.categories" :key="key" class="article__tags-item">
+          {{ getNameCategoryById(item) }}
         </div>
       </div>
       <h2 class="article__title">
-        {{content.title.rendered}}
+        {{ content.title.rendered }}
       </h2>
-      <div class="article__info">
-        <div class="article__info-item">Евгения Севастьянова</div>
-        <div class="article__info-item">21:30 Сегодня</div>
-      </div>
+
       <div class="article__desc" v-html="content.excerpt.rendered"/>
       <div class="article__img">
-        <img src="https://placehold.it/650x300" alt="">
+        <img :src="content.acf.cover.url">
       </div>
-      <div class="article__additions">
-        <div class="article__additions-item">
-          Поделиться
-        </div>
-        <div class="article__additions-item">
-          Избранное
-        </div>
-        <div class="article__additions-item">
-          368
-        </div>
+      <div class="article__info">
+        <div class="article__info-item">Евгения Севастьянова</div>
+        <div class="article__info-item article__info-item_view">{{ views }}</div>
+        <div class="article__info-item article__info-item_time">{{ time }} мин.</div>
       </div>
     </div>
   </nuxt-link>
 </template>
 
 <script>
+
 export default {
   props: {
     content: {
+      slug: {},
       title: {
         rendered: {
           type: String
@@ -48,12 +38,34 @@ export default {
         rendered: {
           type: String
         }
-      }
+      },
+      acf: {
+        cover: {
+          url: String
+        }
+      },
+      categories: {}
+    }
+  },
+  computed: {
+    views() {
+      return getRandomIntInclusive(300, 600)
+    },
+    time() {
+      return getRandomIntInclusive(1, 5)
+    }
+  },
+  methods: {
+    getNameCategoryById(id) {
+      return this.$store.state.categories.find((item) => item.id === id).name
     }
   }
 }
+
+
+const getRandomIntInclusive = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
 </script>
-
-<style scoped>
-
-</style>

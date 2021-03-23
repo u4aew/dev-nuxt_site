@@ -47,6 +47,7 @@ body {
   flex 1
   display flex
   flex-direction column
+
   &__wrapper {
     overflow hidden
     flex 1 0 auto
@@ -64,6 +65,7 @@ body {
   &__content {
     flex-grow 1
     display flex
+    padding 0 20px
   }
 
   &__footer {
@@ -73,23 +75,31 @@ body {
 
 .app-content {
   display flex
-  max-width $block-max-width
+  max-width 1180px
   margin 0 auto
+  box-sizing border-box
   flex 1
+
   &__sidebar {
-    width 200px
-    padding-top 30px
+    width 160px
+    padding-top 20px
+    box-sizing border-box
+    padding-left 0
+    margin-right 20px
   }
+
   &__main {
     flex 1
     box-sizing border-box
-    padding-left 20px
-    padding-right 20px
+    padding-left 30px
+    padding-right 30px
   }
+
   &__additional {
     flex 1
     max-width 300px
     background-color $color-3
-    padding-top 15px
+    color $color-main
+    padding-top 20px
   }
 }

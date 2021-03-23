@@ -5,13 +5,13 @@
         <div class="topic-header__wrapper">
           <div class="topic-header__main">
             <h1 class="topic-header__title">
-                Новости
+                Тренды
             </h1>
           </div>
           <div class="topic-header__side">
             <div class="topic-header__actions">
               <div class="topic-header__actions-item is-active">Все</div>
-              <div class="topic-header__actions-item">Лучшее за неделю</div>
+<!--              <div class="topic-header__actions-item">Лучшее за неделю</div>-->
             </div>
           </div>
         </div>
@@ -38,6 +38,19 @@ export default {
   },
   mounted() {
     this.loading = false
+  },
+  head() {
+    return {
+      title: 'the-magazine.ru',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description'
+        }
+      ]
+    }
   },
   components: {
     ArticlePreview

@@ -1,14 +1,12 @@
 .footer {
   use-size(14)
-  color $color-1
-  background-color $color-primary
-  padding-top 20px
-  padding-bottom 30px
+  background-color $color-3
+  color $color-4
+  padding-top 60px
+  padding-bottom 20px
 
   &__major {
-    padding-bottom 30px
-    margin-bottom 30px
-    border-bottom 1px solid rgba($color-1, 0.1)
+    margin-bottom 50px
   }
 
   &__cols {
@@ -17,13 +15,14 @@
       flex-wrap wrap
       margin-left -10px
       margin-right -10px
+      justify-content space-evenly
     }
 
     &-item {
       flex 1
       margin-left 10px
       margin-right 10px
-
+      max-width 295px
       &_name {
         margin-right 40px
         flex 0 0 auto
@@ -35,27 +34,26 @@
   }
 
   &__nav {
-    &-title {
-      font-weight 700
-      margin-bottom 15px
-      use-size(16)
+    &-list {
+      display flex
+      flex-wrap wrap
+      margin 0 -10px
+      margin-bottom -10px
     }
 
     &-item {
-      margin-bottom 8px
+      margin 0 10px
+      margin-bottom 10px
     }
 
     &-link {
-      color $color-1
-
-      &:hover {
-        color $color-1
-      }
+      color $color-4
     }
   }
 
   &__copyright {
     use-size(14)
+    text-align center
   }
 
   &__minor {
@@ -80,13 +78,11 @@
     }
   }
 
-  &__copyright {
-    use-size(12)
-  }
   &__callback {
     display flex
     justify-content flex-end
   }
+
   &__limitations {
     padding 5px 8px
     border-radius 5px

@@ -11,7 +11,7 @@
           <div class="topic-header__side">
             <div class="topic-header__actions">
               <div class="topic-header__actions-item is-active">Все</div>
-              <div class="topic-header__actions-item">Лучшее за неделю</div>
+<!--              <div class="topic-header__actions-item">Лучшее за неделю</div>-->
             </div>
           </div>
         </div>

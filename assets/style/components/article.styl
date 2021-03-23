@@ -3,13 +3,34 @@
   padding-bottom 30px
   display block
   color inherit !important
+  position relative
+  &:before {
+    content ''
+    position absolute
+    top 0
+    left -30px
+    right -30px
+    bottom 0
+    display block
+    background-color $color-3
+    z-index -1
+    opacity 0
+    overflow hidden
+    border-radius 10px 0 0 10px
+    transition $transition-main
+  }
+  &__title {
+    font-family $font-title
+    use-size(24)
+    font-weight 700
+  }
   &__tags {
     display flex
-    margin 0 -5px
-
+    margin 0 -8px
+    margin-bottom 20px
     &-item {
-      margin 0 5px
-      padding 3px 8px
+      margin 0 8px
+      padding 4px 8px
       background-color $color-3
       color $color-secondary
       border-radius 4px
@@ -35,25 +56,50 @@
     display flex
     margin 0 -5px
     margin-bottom 10px
+
     &-item {
       margin 0 5px
+      &_view {
+        margin-left auto
+        position relative
+        padding-left 20px
+        &:before {
+          content ''
+          display block
+          width 15px
+          height 15px
+          background-image url('assets/images/ui/eye.svg')
+          position absolute
+          left 0
+          top 1px
+        }
+      }
     }
   }
   &__desc {
-    margin-bottom 10px
+    margin-bottom 20px
   }
+
   &__img {
-    margin-bottom 10px
+    margin-bottom 20px
+    min-height 250px
+    border-radius 5px
+    overflow hidden
+    position relative
     img {
       display block
-      max-width 100%
-      width 100%
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
       object-fit cover
-      overflow hidden
-      border-radius 10px
     }
   }
+
   &:hover {
-    opacity 0.8
+    &:before {
+      opacity 1
+    }
   }
 }
