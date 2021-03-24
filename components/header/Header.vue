@@ -12,7 +12,12 @@
           </div>
         </div>
         <div class="header__content-side">
-          <Search/>
+          <div class="header__item header__item_search">
+            <Search/>
+          </div>
+          <div class="header__item header__item_menu">
+            <div class="header__menu"></div>
+          </div>
         </div>
       </div>
     </div>

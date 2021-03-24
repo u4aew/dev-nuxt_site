@@ -1,7 +1,7 @@
 .topic-header {
-  padding-bottom 15px
   position relative
   color $color-4
+
   &__title {
     use-size(20)
     font-weight 700
@@ -18,7 +18,7 @@
   &__main {
     flex 1
     padding-top 20px
-    padding-bottom 10px
+    padding-bottom 20px
   }
 
   &__side {
@@ -30,21 +30,31 @@
     align-items center
     margin 0 -15px
     use-size(14)
+
     &-item {
       margin 0 15px
       cursor pointer
       position relative
-      padding-top 20px
       padding-right 5px
       padding-left 5px
-      padding-bottom 10px
-      border-bottom 2px solid transparent
       box-sizing border-box
       &.is-active {
-        border-bottom 2px solid $color-primary-light
         pointer-events none
         color $color-main
+        &:before {
+          position absolute
+          bottom -10px
+          width 100%
+          display block
+          content ''
+          height 2px
+          left 50%
+          transform translateX(-50%)
+          background-color $color-primary-light
+          border-radius 2px
+        }
       }
+
       &:hover {
         opacity 0.8
       }
@@ -54,7 +64,23 @@
 
 
 .topic {
+  margin 0 auto
+  max-width 650px
+
   &__main {
     margin-bottom 60px
+  }
+}
+
++do(750) {
+  .topic-header {
+    &__main {
+
+    }
+    &__actions {
+      &-item {
+
+      }
+    }
   }
 }

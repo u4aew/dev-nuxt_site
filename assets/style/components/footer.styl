@@ -23,6 +23,7 @@
       margin-left 10px
       margin-right 10px
       max-width 295px
+
       &_name {
         margin-right 40px
         flex 0 0 auto
@@ -89,3 +90,78 @@
     background-color $color-primary-light
   }
 }
+
++do(1200) {
+  .footer {
+    padding-top 20px
+    padding-bottom 20px
+
+    &__major {
+      margin-bottom 20px
+    }
+
+    &__nav {
+      &-list {
+        display flex
+        justify-content center
+      }
+    }
+
+    &__cols {
+      &-list {
+        justify-content flex-start
+      }
+
+      &-item {
+        &_rules {
+          max-width none
+          flex 1 1 100%
+          padding-top 15px
+          display flex
+          justify-content center
+
+          .footer {
+            &__nav {
+              &-list {
+                display block
+                text-align center
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
++do(750) {
+  .footer {
+    &__major {
+    }
+
+    &__nav {
+      &-list {
+        justify-content flex-start
+      }
+    }
+
+    &__cols {
+      &-item {
+        flex 0 0 auto
+        margin-bottom 20px
+        &_rules {
+          padding-top 0
+          margin-bottom 0
+          .footer {
+            &__nav {
+              &-list {
+                text-align left
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

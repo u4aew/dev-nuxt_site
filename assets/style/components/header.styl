@@ -4,15 +4,17 @@
   color white
   background: linear-gradient(90deg, #51A1FF 12.94%, #CB8FF4 26.21%, #A5F4FF 41.35%, #89A2FA 60.65%, #6DAFFC 77.63%);
   min-height 48px
-  padding-left 50px
-  padding-right 50px
+  padding-left 20px
+  padding-right 20px
   box-sizing border-box
   display flex
   align-items center
+
   &__wrapper {
     margin 0 auto
     flex 1
   }
+
   &__content {
     display flex
     margin-left -5px
@@ -38,14 +40,23 @@
     font-weight 700
     use-size(20)
     outline none
+
     img {
       display block
     }
+
     &:hover {
       opacity 0.8
     }
+
     &:active {
       opacity 0.6
+    }
+  }
+
+  &__item {
+    &_menu {
+      display none
     }
   }
 
@@ -63,8 +74,17 @@
     }
   }
 
+  &__menu {
+    width 20px
+    height 20px
+    background-image url('assets/images/ui/menu.svg')
+    background-repeat no-repeat
+    background-size cover
+  }
+
   &__nav {
     color: white;
+
     &-list {
       display flex
       align-items center
@@ -81,6 +101,20 @@
       font-weight 500
       color white !important
       text-decoration none
+    }
+  }
+}
+
++do(1000) {
+  .header {
+    &__item {
+      &_search {
+        display none
+      }
+
+      &_menu {
+        display block
+      }
     }
   }
 }

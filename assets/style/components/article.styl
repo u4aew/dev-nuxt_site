@@ -114,21 +114,37 @@
   }
 }
 
+
++do(750) {
+  .article-preview {
+    padding-top 10px
+    padding-bottom 10px
+    &__title {
+      use-size(20)
+    }
+    &__tags {
+      margin-bottom 10px
+    }
+  }
+}
+
 .article {
   padding-top 20px
 
   &__main {
-    max-width 685px
+    max-width 670px
   }
 
   &__content {
     margin-bottom 40px
+
     img {
       width 100%
       border-radius 5px
       max-width 100%
     }
   }
+
   &__info {
     display flex
     color $color-4
@@ -226,6 +242,7 @@
 .article-author {
   display flex
   align-items center
+
   &__side {
     flex 0 0 auto
     margin-right 10px

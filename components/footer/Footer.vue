@@ -55,14 +55,14 @@
                 </div>
               </div>
             </div>
-            <div class="footer__cols-item footer__cols-item_nav">
+            <div class="footer__cols-item footer__cols-item_rules">
               <div class="footer__nav">
                 <div class="footer__nav-list">
                   <div class="footer__nav-item">
                     <a href="#" class="footer__nav-link">Пользовательское соглашение</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Политика обработки персональных данных</a>
+                    <a href="#" class="footer__nav-link">Персональных данные</a>
                   </div>
                 </div>
               </div>

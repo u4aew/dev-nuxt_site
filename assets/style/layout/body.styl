@@ -65,7 +65,8 @@ body {
   &__content {
     flex-grow 1
     display flex
-    padding 0 20px
+    padding-left 20px
+    padding-right 20px
   }
 
   &__footer {
@@ -75,31 +76,64 @@ body {
 
 .app-content {
   display flex
-  max-width 1180px
-  margin 0 auto
   box-sizing border-box
   flex 1
-
   &__sidebar {
-    width 160px
+    width 240px
     padding-top 20px
     box-sizing border-box
     padding-left 0
     margin-right 20px
+    //position: sticky;
+    //top: 60px;
+    //height: calc(100vh - 60px);
   }
 
   &__main {
-    flex 1
     box-sizing border-box
-    padding-left 30px
-    padding-right 30px
+    flex-grow: 1;
+    min-width: 0;
   }
 
   &__additional {
-    flex 1
-    max-width 300px
+    width 300px
     background-color $color-3
     color $color-main
     padding-top 20px
+    position relative
+    box-sizing border-box
+    margin-left 20px
+    &:before {
+      content ''
+      position absolute
+      top 0
+      left 0
+      bottom 0
+      right -100vw
+      background-color $color-3
+      z-index -1
+    }
+  }
+}
+
++do(1200) {
+ .app-content {
+   &__additional {
+     width 265px
+   }
+   &__sidebar {
+     width 220px
+   }
+ }
+}
+
++do(1000) {
+  .app-content {
+    &__additional {
+      display none
+    }
+    &__sidebar {
+      display none
+    }
   }
 }

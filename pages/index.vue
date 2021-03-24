@@ -5,13 +5,12 @@
         <div class="topic-header__wrapper">
           <div class="topic-header__main">
             <h1 class="topic-header__title">
-                Тренды
+                Лента
             </h1>
           </div>
           <div class="topic-header__side">
             <div class="topic-header__actions">
               <div class="topic-header__actions-item is-active">Все</div>
-<!--              <div class="topic-header__actions-item">Лучшее за неделю</div>-->
             </div>
           </div>
         </div>
