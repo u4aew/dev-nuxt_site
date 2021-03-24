@@ -1,9 +1,10 @@
-.article {
+.article-preview {
   padding-top 30px
   padding-bottom 30px
   display block
   color inherit !important
   position relative
+
   &:before {
     content ''
     position absolute
@@ -19,15 +20,18 @@
     border-radius 10px 0 0 10px
     transition $transition-main
   }
+
   &__title {
     font-family $font-title
     use-size(24)
     font-weight 700
   }
+
   &__tags {
     display flex
     margin 0 -8px
     margin-bottom 20px
+
     &-item {
       margin 0 8px
       padding 4px 8px
@@ -59,10 +63,12 @@
 
     &-item {
       margin 0 5px
+
       &_view {
         margin-left auto
         position relative
         padding-left 20px
+
         &:before {
           content ''
           display block
@@ -76,6 +82,7 @@
       }
     }
   }
+
   &__desc {
     margin-bottom 20px
   }
@@ -86,6 +93,7 @@
     border-radius 5px
     overflow hidden
     position relative
+
     img {
       display block
       position absolute
@@ -94,6 +102,8 @@
       right 0
       bottom 0
       object-fit cover
+      width 100%
+      height 100%
     }
   }
 
@@ -101,5 +111,133 @@
     &:before {
       opacity 1
     }
+  }
+}
+
+.article {
+  padding-top 20px
+
+  &__main {
+    max-width 685px
+  }
+
+  &__content {
+    margin-bottom 40px
+    img {
+      width 100%
+      border-radius 5px
+      max-width 100%
+    }
+  }
+  &__info {
+    display flex
+    color $color-4
+    use-size(12)
+    margin 0 -5px
+    justify-content flex-end
+
+    &-item {
+      margin 0 5px
+
+      &_view {
+        margin-left auto
+        position relative
+        padding-left 20px
+
+        &:before {
+          content ''
+          display block
+          width 15px
+          height 15px
+          background-image url('assets/images/ui/eye.svg')
+          position absolute
+          left 0
+          top 1px
+        }
+      }
+    }
+  }
+
+  &__img {
+    min-height 250px
+    position relative
+    border-radius 5px
+    overflow hidden
+    margin-bottom 20px
+
+    img {
+      position absolute
+      top 0
+      left 0
+      right 0
+      display block
+      bottom 0
+      object-fit cover
+      width 100%
+      height 100%
+    }
+  }
+
+  &__title {
+    use-size(34)
+    margin-bottom 30px
+  }
+
+  &__informer {
+    margin-bottom 30px
+  }
+}
+
+.article-informer {
+  padding 15px 20px
+  overflow hidden
+  border-radius 15px
+  background-color $color-3
+  color $color-4
+  use-size(12)
+
+  &__list {
+    display flex
+    margin 0 -10px
+    justify-content space-between
+    align-items center
+
+    &-item {
+      margin 0 10px
+    }
+  }
+}
+
+.article-tags {
+  display flex
+  margin 0 -7px
+  use-size(12)
+  font-weight 700
+  color $color-secondary
+
+  &__item {
+    margin 0 7px
+    padding 5px 10px
+    background-color $color-1
+    border-radius 5px
+  }
+}
+
+.article-author {
+  display flex
+
+  &__side {
+    flex 0 0 auto
+    margin-right 10px
+  }
+
+  &__main {
+    flex 1
+  }
+
+  &__avatart {
+    width 30px
+    height 30px
+    background-color $color-primary
   }
 }

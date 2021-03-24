@@ -1,23 +1,23 @@
 <template>
-  <nuxt-link :to="`/${content.slug}`" class="article">
-    <div class="article__wrapper">
-      <div class="article__tags">
-        <div v-for="(item, key) in content.categories" :key="key" class="article__tags-item">
+  <nuxt-link :to="`/${content.slug}`" class="article-preview">
+    <div class="article-preview__wrapper">
+      <div class="article-preview__tags">
+        <div v-for="(item, key) in content.categories" :key="key" class="article-preview__tags-item">
           {{ getNameCategoryById(item) }}
         </div>
       </div>
-      <h2 class="article__title">
+      <h2 class="article-preview__title">
         {{ content.title.rendered }}
       </h2>
 
-      <div class="article__desc" v-html="content.excerpt.rendered"/>
-      <div class="article__img">
+      <div class="article-preview__desc" v-html="content.excerpt.rendered"/>
+      <div class="article-preview__img">
         <img :src="imgCover">
       </div>
-      <div class="article__info">
-        <div class="article__info-item">Евгения Севастьянова</div>
-        <div class="article__info-item article__info-item_view">{{ views }}</div>
-        <div class="article__info-item article__info-item_time">{{ time }} мин.</div>
+      <div class="article-preview__info">
+        <div class="article-preview__info-item">Евгения Севастьянова</div>
+        <div class="article-preview__info-item article-preview__info-item_view">{{ views }}</div>
+        <div class="article-preview__info-item article-preview__info-item_time">{{ time }} мин.</div>
       </div>
     </div>
   </nuxt-link>
