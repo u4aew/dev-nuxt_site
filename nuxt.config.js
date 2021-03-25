@@ -52,6 +52,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/moment',
+    '@nuxtjs/yandex-metrika'
   ],
   buildModules: [
     '@/modules/generator',
@@ -72,6 +73,14 @@ module.exports = {
   },
   moment: {
     locales: ['ru']
+  },
+  yandexMetrika: {
+    id: '74632201',
+    webvisor: true,
+    clickmap:true,
+    useCDN:false,
+    trackLinks:true,
+    accurateTrackBounce:true,
   },
   styleResources: {
     stylus: [
