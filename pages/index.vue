@@ -5,7 +5,7 @@
         <div class="topic-header__wrapper">
           <div class="topic-header__main">
             <h1 class="topic-header__title">
-                Лента
+              Лента
             </h1>
           </div>
           <div class="topic-header__side">
@@ -29,6 +29,7 @@
 
 <script>
 import ArticlePreview from "@/components/articles/ArticlePreview";
+
 export default {
   loading: true,
   async asyncData({store, $axios, env}) {
@@ -40,15 +41,7 @@ export default {
   },
   head() {
     return {
-      title: 'the-magazine.ru',
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'My custom description'
-        }
-      ]
+      title: 'TM - Интернет журнал, новости, технологии, здоровье, кино'
     }
   },
   components: {

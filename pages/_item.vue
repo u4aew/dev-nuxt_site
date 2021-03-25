@@ -38,6 +38,9 @@
         <div class="article__info-item">{{ time }} мин</div>
       </div>
       <div v-html="page.content.rendered" class="article__content"/>
+      <div class="article__comments">
+        <Disqus />
+      </div>
     </div>
   </div>
 </template>

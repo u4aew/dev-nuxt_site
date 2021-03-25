@@ -3,13 +3,13 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'the-magazine.ru',
+    title: 'TM - Интернет журнал, новости, технологии, здоровье, кино',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'},
       {hid: 'description', name: 'description', content: 'the-magazine.ru'},
-      {name: 'msapplication-TileColor', content: '#da532c'},
-      {name: 'theme-color', content: '#ffffff'}
+      {name: 'msapplication-TileColor', content: '#51A1FF'},
+      {name: 'theme-color', content: '#B591BE'}
     ],
     link: [
       {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'},
@@ -58,6 +58,9 @@ module.exports = {
     '@/modules/generator',
     '@nuxtjs/moment',
   ],
+  plugins: [
+    '~/plugins/disqus'
+  ],
   css: [
     'normalize.css/normalize.css'
   ],
@@ -77,10 +80,10 @@ module.exports = {
   yandexMetrika: {
     id: '74632201',
     webvisor: true,
-    clickmap:true,
-    useCDN:false,
-    trackLinks:true,
-    accurateTrackBounce:true,
+    clickmap: true,
+    useCDN: false,
+    trackLinks: true,
+    accurateTrackBounce: true,
   },
   styleResources: {
     stylus: [
