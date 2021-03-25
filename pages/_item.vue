@@ -39,7 +39,7 @@
       </div>
       <div v-html="page.content.rendered" class="article__content"/>
       <div class="article__comments">
-        <Disqus />
+        <Disqus lang="ru" :shortname="page.slug"/>
       </div>
     </div>
   </div>
