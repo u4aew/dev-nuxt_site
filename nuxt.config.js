@@ -50,10 +50,12 @@ module.exports = {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/moment',
   ],
   buildModules: [
-    '@/modules/generator'
+    '@/modules/generator',
+    '@nuxtjs/moment',
   ],
   css: [
     'normalize.css/normalize.css'
@@ -66,6 +68,9 @@ module.exports = {
       priority: 1,
       lastmod: new Date()
     }
+  },
+  moment: {
+    locales: ['ru']
   },
   styleResources: {
     stylus: [

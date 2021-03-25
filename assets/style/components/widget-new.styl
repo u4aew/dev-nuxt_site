@@ -3,6 +3,7 @@
   padding-left 20px
   padding-right 20px
   box-sizing border-box
+
   &__title {
     font-weight 700
   }
@@ -33,7 +34,7 @@
   }
 
   &__item {
-    margin-bottom 20px
+    margin-bottom 10px
     display block
     color $color-4
 
@@ -48,6 +49,9 @@
 
     &-main {
       flex 1
+      max-height 2.6em
+      overflow hidden
+      text-overflow ellipsis
     }
   }
 }
@@ -59,10 +63,12 @@
         display block
       }
     }
+
     &__item {
       &-wrapper {
         display block
       }
+
       &-side {
         margin-right 0
         margin-bottom 5px

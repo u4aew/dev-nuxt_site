@@ -12,7 +12,8 @@
                 </nuxt-link>
               </div>
             </div>
-            <div class="article-informer__list-item article-informer__list-item_date">17 марта 2021 | 19:58</div>
+            <div class="article-informer__list-item article-informer__list-item_date">{{ getDate(page.date) }}
+            </div>
             <div class="article-informer__list-item article-informer__list-item_author">
               <div class="article-author">
                 <div class="article-author__side">
@@ -73,7 +74,10 @@ export default {
     },
     getSlugCategoryById(id) {
       return this.$store.state.categories.find((item) => item.id === id).slug
-    }
+    },
+    getDate(value) {
+      return this.$moment(value).format('DD MMMM YYYY | HH:mm')
+    },
   },
   computed: {
     views() {

@@ -9,21 +9,21 @@
             </div>
           </div>
           <div class="widget-new__header-side">
-            17 марта, среда
+            {{ date.format('DD MMMM') }}, {{ date.format('dddd') }}
           </div>
         </div>
       </div>
     </div>
     <div class="widget-new__main">
       <div class="widget-new__list">
-        <div class="widget-new__list-item">
-          <nuxt-link to="/" class="widget-new__item">
+        <div v-for="(item, key) in news" :key="key" class="widget-new__list-item">
+          <nuxt-link :to="`/${item.slug}`" class="widget-new__item">
             <div class="widget-new__item-wrapper">
               <div class="widget-new__item-side">
-                18:00
+                {{ getTime(item.date) }}
               </div>
               <div class="widget-new__item-main">
-                Jack Harlow и Chris Brown "Already Best Friends"
+                {{ item.title.rendered }}
               </div>
             </div>
           </nuxt-link>
@@ -34,9 +34,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'WidgetNew',
+  data() {
+    return {
+      date: this.$moment()
+    }
+  },
+  computed: {
+    news() {
+      return this.$store.state.lastNews
+    }
+  },
+  methods: {
+    getTime(value) {
+      const data = this.$moment(value)
+      return data.format('HH:mm')
+    }
+  }
+}
+
 </script>
-
-<style scoped>
-
-</style>

@@ -17,28 +17,28 @@
               <div class="footer__nav">
                 <div class="footer__nav-list">
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Facebook</a>
+                    <a href="/" target="_blank" class="footer__nav-link">Facebook</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">YouTube</a>
+                    <a href="/" target="_blank" class="footer__nav-link">YouTube</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Telegram</a>
+                    <a href="/" target="_blank" class="footer__nav-link">Telegram</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">RSS</a>
+                    <a href="/" target="_blank" class="footer__nav-link">RSS</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Вконтакте</a>
+                    <a href="/" target="_blank" class="footer__nav-link">Вконтакте</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Viber</a>
+                    <a href="/" target="_blank" class="footer__nav-link">Viber</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Twitter</a>
+                    <a href="/" target="_blank" class="footer__nav-link">Twitter</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Push</a>
+                    <a href="/" target="_blank" class="footer__nav-link">Push</a>
                   </div>
                 </div>
               </div>
@@ -47,10 +47,10 @@
               <div class="footer__nav">
                 <div class="footer__nav-list">
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Пользовательское соглашение</a>
+                    <a href="/personal-data.pdf" target="_blank" class="footer__nav-link">Пользовательское соглашение</a>
                   </div>
                   <div class="footer__nav-item">
-                    <a href="#" class="footer__nav-link">Персональных данные</a>
+                    <a href="/personal-data.pdf" target="_blank" class="footer__nav-link">Персональных данные</a>
                   </div>
                 </div>
               </div>
