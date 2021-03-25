@@ -6,9 +6,10 @@
           <div class="article-informer__list">
             <div class="article-informer__list-item article-informer__list-item_tags">
               <div class="article-tags">
-                <div v-for="(item, key) in page.categories" :key="key" class="article-tags__item">
-                  {{ getNameCategoryById(item) }}
-                </div>
+                <nuxt-link :to="`topics/${getSlugCategoryById(id)}`" v-for="(id, key) in page.categories" :key="key"
+                           class="article-tags__item">
+                  {{ getNameCategoryById(id) }}
+                </nuxt-link>
               </div>
             </div>
             <div class="article-informer__list-item article-informer__list-item_date">17 марта 2021 | 19:58</div>
@@ -44,7 +45,6 @@
 
 export default {
   loading: true,
-  layout: 'blog',
   async asyncData({store, $axios, env, route, error}) {
     const slug = route.params.item
     const posts = await $axios.$get(`${env.apiUrl}/posts`, {
@@ -68,7 +68,11 @@ export default {
   },
   methods: {
     getNameCategoryById(id) {
+      console.log(id, 'id')
       return this.$store.state.categories.find((item) => item.id === id).name
+    },
+    getSlugCategoryById(id) {
+      return this.$store.state.categories.find((item) => item.id === id).slug
     }
   },
   computed: {

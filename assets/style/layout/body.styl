@@ -78,6 +78,7 @@ body {
   display flex
   box-sizing border-box
   flex 1
+
   &__sidebar {
     width 240px
     padding-top 20px
@@ -103,6 +104,7 @@ body {
     position relative
     box-sizing border-box
     margin-left 20px
+
     &:before {
       content ''
       position absolute
@@ -117,14 +119,15 @@ body {
 }
 
 +do(1200) {
- .app-content {
-   &__additional {
-     width 265px
-   }
-   &__sidebar {
-     width 220px
-   }
- }
+  .app-content {
+    &__additional {
+      width 265px
+    }
+
+    &__sidebar {
+      width 220px
+    }
+  }
 }
 
 +do(1000) {
@@ -132,8 +135,39 @@ body {
     &__additional {
       display none
     }
+
     &__sidebar {
       display none
     }
+  }
+}
+
+.app-menu {
+  position: fixed;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  top: 0;
+  z-index: 21;
+  box-sizing border-box
+  display flex
+
+  &__body {
+    flex 1
+    position relative
+    z-index 15
+    background-color white
+    padding 20px
+    overflow-y auto
+  }
+
+  &__overlay {
+    position fixed
+    top 0
+    left 0
+    right -100vw
+    bottom 0
+    z-index 5
+    background-color rgba($color-2, 0.8)
   }
 }

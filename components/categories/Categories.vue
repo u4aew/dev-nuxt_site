@@ -1,5 +1,5 @@
 <template>
-  <div class="categories">
+  <div class="categories" :class="{'categories_mobile': mobile}">
     <div class="categories__main">
       <div class="categories__list">
         <div class="categories__list-item">
@@ -37,8 +37,13 @@
 export default {
   name: 'Categories',
   props: {
-    item: {
-      type: Array
+    mobile: {
+      type: Boolean
+    }
+  },
+  methods: {
+    closeMenu() {
+      this.$store.dispatch('SET_MENU_OPEN', false)
     }
   }
 }

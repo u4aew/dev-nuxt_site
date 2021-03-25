@@ -17,7 +17,7 @@
     z-index -1
     opacity 0
     overflow hidden
-    border-radius 10px 0 0 10px
+    border-radius 10px
     transition $transition-main
   }
 
@@ -119,9 +119,11 @@
   .article-preview {
     padding-top 10px
     padding-bottom 10px
+
     &__title {
       use-size(20)
     }
+
     &__tags {
       margin-bottom 10px
     }
@@ -130,9 +132,11 @@
 
 .article {
   padding-top 20px
+  max-width 670px
+  margin 0 auto
 
   &__main {
-    max-width 670px
+
   }
 
   &__content {
@@ -204,6 +208,24 @@
   }
 }
 
+
++do(1300) {
+  .article {
+    &__main {
+      max-width 650px
+    }
+  }
+}
+
++do(750) {
+  .article {
+    padding-top 0
+    &__informer {
+      margin-bottom 15px
+    }
+  }
+}
+
 .article-informer {
   padding 15px 20px
   overflow hidden
@@ -217,12 +239,16 @@
     margin 0 -10px
     justify-content space-between
     align-items center
+    flex-wrap wrap
+    margin-bottom -10px
 
     &-item {
       margin 0 10px
+      margin-bottom 10px
     }
   }
 }
+
 
 .article-tags {
   display flex
@@ -236,6 +262,7 @@
     padding 5px 10px
     background-color $color-1
     border-radius 5px
+    color $color-secondary
   }
 }
 
@@ -257,5 +284,13 @@
     height 30px
     background-color $color-primary
     border-radius 50%
+  }
+}
+
++do(750) {
+  .article-informer {
+    border-radius 0
+    margin 0 -20px
+    padding 20px 20px
   }
 }

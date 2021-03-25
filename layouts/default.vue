@@ -21,6 +21,7 @@
         <Footer/>
       </div>
     </div>
+    <Menu/>
   </div>
 </template>
 
@@ -33,15 +34,18 @@ import Categories from "../components/categories/Categories";
 import WidgetNew from "@/components/widgets/WidgetNew";
 import Header from '~/components/header/Header'
 import Footer from '~/components/footer/Footer'
+import Menu from "@/components/menu/Menu";
 
 export default {
   components: {
     Header,
     Footer,
     Categories,
-    WidgetNew
+    WidgetNew,
+    Menu
   },
   loading: true,
+
   mounted() {
     this.loading = false
   }

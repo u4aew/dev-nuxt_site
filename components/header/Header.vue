@@ -16,7 +16,7 @@
             <Search/>
           </div>
           <div class="header__item header__item_menu">
-            <div class="header__menu"></div>
+            <div @click="openMenu" class="header__menu"></div>
           </div>
         </div>
       </div>
@@ -31,6 +31,11 @@ export default {
   name: 'Header',
   components: {
     Search
+  },
+  methods: {
+    openMenu() {
+      this.$store.dispatch('SET_MENU_OPEN', true)
+    }
   }
 }
 </script>
