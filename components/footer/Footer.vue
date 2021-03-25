@@ -7,20 +7,8 @@
             <div class="footer__cols-item footer__cols-item_nav">
               <div class="footer__nav">
                 <div class="footer__nav-list">
-                  <div class="footer__nav-item">
-                    <nuxt-link to="page/adv" class="footer__nav-link">Реклама</nuxt-link>
-                  </div>
-                  <div class="footer__nav-item">
-                    <nuxt-link to="page/adv" class="footer__nav-link">Контакты</nuxt-link>
-                  </div>
-                  <div class="footer__nav-item">
-                    <nuxt-link to="page/adv" class="footer__nav-link">О проекте</nuxt-link>
-                  </div>
-                  <div class="footer__nav-item">
-                    <nuxt-link to="page/adv" class="footer__nav-link">Редакция</nuxt-link>
-                  </div>
-                  <div class="footer__nav-item">
-                    <nuxt-link to="page/adv" class="footer__nav-link">Вакансии</nuxt-link>
+                  <div v-for="(page, key) in pages" class="footer__nav-item" :key="key">
+                    <nuxt-link :to="page.slug" class="footer__nav-link">{{ page.name }}</nuxt-link>
                   </div>
                 </div>
               </div>
@@ -84,8 +72,15 @@
 </template>
 
 <script>
+import pages from "@/const/pages";
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      pages
+    }
+  }
 }
 </script>
 

@@ -13,20 +13,8 @@
     </div>
     <div class="categories__side">
       <div class="categories__links">
-        <div class="categories__links-item">
-          <nuxt-link class="categories__link categories__link_simple" :to="`/page/adv`">Реклама</nuxt-link>
-        </div>
-        <div class="categories__links-item">
-          <nuxt-link class="categories__link categories__link_simple" :to="`/page/adv`">Редакция</nuxt-link>
-        </div>
-        <div class="categories__links-item">
-          <nuxt-link class="categories__link categories__link_simple" :to="`/page/adv`">Контакты</nuxt-link>
-        </div>
-        <div class="categories__links-item">
-          <nuxt-link class="categories__link categories__link_simple" :to="`/page/adv`">Вакансии</nuxt-link>
-        </div>
-        <div class="categories__links-item">
-          <nuxt-link class="categories__link categories__link_simple" :to="`/page/about`">О проекте</nuxt-link>
+        <div v-for="(item, key) in pages" class="categories__links-item" :key="key">
+          <nuxt-link class="categories__link categories__link_simple" :to="item.slug">{{ item.name }}</nuxt-link>
         </div>
       </div>
     </div>
@@ -34,8 +22,15 @@
 </template>
 
 <script>
+import pages from '@/const/pages'
+
 export default {
   name: 'Categories',
+  data() {
+    return {
+      pages
+    }
+  },
   props: {
     mobile: {
       type: Boolean
