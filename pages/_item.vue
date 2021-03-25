@@ -39,7 +39,7 @@
       </div>
       <div v-html="page.content.rendered" class="article__content"/>
       <div class="article__comments">
-        <Disqus lang="ru" :shortname="page.slug"/>
+        <div id="disqus_thread"/>
       </div>
     </div>
   </div>
@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     getNameCategoryById(id) {
-      console.log(id, 'id')
       return this.$store.state.categories.find((item) => item.id === id).name
     },
     getSlugCategoryById(id) {
@@ -99,7 +98,17 @@ export default {
   },
   mounted() {
     this.loading = false
+    setComment()
   }
+}
+
+const setComment = () => {
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://the-magazine-ru.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 }
 
 const getRandomIntInclusive = (min, max) => {

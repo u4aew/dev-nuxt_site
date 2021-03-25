@@ -58,9 +58,6 @@ module.exports = {
     '@/modules/generator',
     '@nuxtjs/moment',
   ],
-  plugins: [
-    '~/plugins/disqus'
-  ],
   css: [
     'normalize.css/normalize.css'
   ],
