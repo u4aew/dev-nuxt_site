@@ -10,7 +10,8 @@
     "start": "cross-env BASE_URL=https://the-magazine.ru/wp-json/wp/v2 API_URL=https://the-magazine.ru/wp-json/wp/v2 nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "sitemap": "npm run generate && cd ./dist && cp sitemap.xml ../static"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
