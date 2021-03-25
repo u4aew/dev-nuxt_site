@@ -6,7 +6,7 @@
           <div class="article-informer__list">
             <div class="article-informer__list-item article-informer__list-item_tags">
               <div class="article-tags">
-                <nuxt-link :to="`topics/${getSlugCategoryById(id)}`" v-for="(id, key) in page.categories" :key="key"
+                <nuxt-link :to="`/topics/${getSlugCategoryById(id)}`" v-for="(id, key) in page.categories" :key="key"
                            class="article-tags__item">
                   {{ getNameCategoryById(id) }}
                 </nuxt-link>
@@ -40,7 +40,7 @@
         <div class="article__info-item article__info-item_view">{{ views }}</div>
         <div class="article__info-item">{{ time }} мин</div>
       </div>
-      <div v-html="page.content.rendered" class="article__content"/>
+      <div v-html="page.content.rendered" class="article-content article__content"/>
       <div class="article__comments">
         <div id="disqus_thread"/>
       </div>
