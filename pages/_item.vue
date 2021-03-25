@@ -34,6 +34,9 @@
         <img :src="imgCover">
       </div>
       <div class="article__info">
+        <div class="article__info-item article__info-item_share">
+          <div class="ya-share2" data-curtain data-shape="round" data-limit="3" data-services="vkontakte,facebook,telegram,twitter"></div>
+        </div>
         <div class="article__info-item article__info-item_view">{{ views }}</div>
         <div class="article__info-item">{{ time }} мин</div>
       </div>
@@ -67,7 +70,13 @@ export default {
   },
   head() {
     return {
-      title: this.page.title.rendered
+      title: this.page.title.rendered,
+      script: [
+        {
+          src: "https://yastatic.net/share2/share.js",
+          async: true
+        },
+      ]
     }
   },
   methods: {
