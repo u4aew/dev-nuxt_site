@@ -63,6 +63,7 @@ module.exports = {
   sitemap: {
     hostname: 'https://the-magazine.ru',
     gzip: true,
+    generate: true,
     defaults: {
       changefreq: 'daily',
       priority: 1,
