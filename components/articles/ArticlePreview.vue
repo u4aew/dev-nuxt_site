@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/${content.slug}`" class="article-preview">
+  <nuxt-link :to="`/${content.slug}/`" class="article-preview">
     <div class="article-preview__wrapper">
       <div class="article-preview__tags">
         <div v-for="(item, key) in content.categories" :key="key" class="article-preview__tags-item">
@@ -11,7 +11,7 @@
       </h2>
 
       <div class="article-preview__desc" v-html="content.excerpt.rendered"/>
-      <div class="article-preview__img">
+      <div v-if="imgCover" class="article-preview__img">
         <img :src="imgCover">
       </div>
       <div class="article-preview__info">
@@ -58,7 +58,7 @@ export default {
       if (this.content.acf && this.content.acf.cover && this.content.acf.cover.url) {
         return this.content.acf.cover.url
       } else {
-        return ''
+        return false
       }
     }
   },

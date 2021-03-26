@@ -7,7 +7,7 @@
         </div>
         <div v-if="$store.state.categories" v-for="(item, index) in $store.state.categories" :key="index"
              class="categories__list-item">
-          <nuxt-link class="categories__link" :to="`/topics/${item.slug}`">{{ item.name }}</nuxt-link>
+          <nuxt-link class="categories__link" :to="`/topics/${item.slug}/`">{{ item.name }}</nuxt-link>
         </div>
       </div>
     </div>

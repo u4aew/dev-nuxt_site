@@ -6,7 +6,7 @@
           <div class="article-informer__list">
             <div class="article-informer__list-item article-informer__list-item_tags">
               <div class="article-tags">
-                <nuxt-link :to="`/topics/${getSlugCategoryById(id)}`" v-for="(id, key) in page.categories" :key="key"
+                <nuxt-link :to="`/topics/${getSlugCategoryById(id)}/`" v-for="(id, key) in page.categories" :key="key"
                            class="article-tags__item">
                   {{ getNameCategoryById(id) }}
                 </nuxt-link>
@@ -30,7 +30,7 @@
       <h1 class="article__title">
         {{ page.title.rendered }}
       </h1>
-      <div class="article__img">
+      <div v-if="imgCover" class="article__img">
         <img :src="imgCover">
       </div>
       <div class="article__info">
@@ -101,7 +101,7 @@ export default {
       if (this.page.acf && this.page.acf.cover && this.page.acf.cover.url) {
         return this.page.acf.cover.url
       } else {
-        return ''
+        return false
       }
     }
   },

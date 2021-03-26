@@ -17,7 +17,7 @@
     <div class="widget-new__main">
       <div class="widget-new__list">
         <div v-for="(item, key) in news" :key="key" class="widget-new__list-item">
-          <nuxt-link :to="`/${item.slug}`" class="widget-new__item">
+          <nuxt-link :to="`/${item.slug}/`" class="widget-new__item">
             <div class="widget-new__item-wrapper">
               <div class="widget-new__item-side">
                 {{ getTime(item.date) }}
