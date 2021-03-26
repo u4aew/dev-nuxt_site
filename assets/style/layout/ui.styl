@@ -56,13 +56,13 @@ ol {
     list-style-type none
     position relative
     margin-bottom 25px
-    padding-left 35px
-
+    padding-left 25px
+    font-weight 300
     &::before {
       content counter(nums) '.'
       position absolute
       left 0
-      color $color-primary
+      color $color-secondary
     }
 
     &:last-child {
@@ -73,10 +73,12 @@ ol {
 
 
 ul {
-  li {
+  li:not(.ya-share2__item) {
     position relative
     margin-bottom 25px
     padding-left 25px
+    list-style none
+    font-weight 300
 
     &::before {
       content ''
@@ -84,8 +86,10 @@ ul {
       position absolute
       left 0
       top 5px
-      size 7px
-      background-color $color-primary
+      height 7px
+      width 7px
+      border-radius 50%
+      background-color $color-secondary
     }
 
     &:last-child {
@@ -93,6 +97,7 @@ ul {
     }
   }
 }
+
 +do(750) {
   ul {
     li {
@@ -102,6 +107,7 @@ ul {
     }
   }
 }
+
 * {
   min-width 0
   min-height 0

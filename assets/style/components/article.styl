@@ -220,13 +220,65 @@
 
   iframe {
     width 100%
+    max-width 100%
   }
+
   .img-vh {
     margin-top 10px
     margin-bottom 10px
   }
+
   .img-fluid {
     width 100%
+  }
+
+  blockquote {
+    display block
+    padding-left 90px
+    font-weight 300
+    position relative
+    max-width 600px
+    box-sizing border-box
+
+    &:before {
+      content ''
+      display block
+      width 28px
+      height 22px
+      background-image url('assets/images/ui/blockquote.svg')
+      position absolute
+      left 0
+      top 0
+      background-repeat no-repeat
+      background-position center
+      background-size contain
+    }
+
+    p {
+      margin 0 !important
+    }
+
+  }
+
+  a {
+    color $color-secondary
+
+    &:hover {
+      color $color-primary
+    }
+  }
+}
+
++do(750) {
+  .article-content {
+    blockquote {
+      padding-left 40px
+
+      &:before {
+        width 20px
+        height 20px
+      }
+    }
   }
 }
 
