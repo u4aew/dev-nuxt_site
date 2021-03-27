@@ -142,6 +142,25 @@
 
   }
 
+  &__source {
+    use-size(12)
+    color $color-4
+    display flex
+    align-items center
+    margin 0 -5px
+    justify-content flex-end
+    &-item {
+      margin 0 5px
+    }
+    &-link {
+      display block
+      color $color-4
+      max-width 150px
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+    }
+  }
   &__comments {
     margin-bottom 20px
   }

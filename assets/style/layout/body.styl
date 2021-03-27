@@ -72,6 +72,15 @@ body {
   &__footer {
     margin-top auto
   }
+
+  &__header {
+    &:before {
+      content ''
+      display block
+      width 100%
+      height 48px
+    }
+  }
 }
 
 .app-content {
@@ -79,12 +88,21 @@ body {
   box-sizing border-box
   flex 1
 
+  &:before {
+    content ''
+    display block
+    width 240px
+
+  }
+
   &__sidebar {
     width 240px
     padding-top 20px
     box-sizing border-box
     padding-left 0
     margin-right 20px
+    position fixed
+    left 20px
     //position: sticky;
     //top: 60px;
     //height: calc(100vh - 60px);
@@ -120,6 +138,10 @@ body {
 
 +do(1200) {
   .app-content {
+    &:before {
+      width 220px
+    }
+
     &__additional {
       width 265px
     }
@@ -135,7 +157,9 @@ body {
     &__additional {
       display none
     }
-
+    &:before {
+      display none
+    }
     &__sidebar {
       display none
     }
@@ -148,7 +172,7 @@ body {
   max-width: 300px;
   height: 100%;
   top: 0;
-  z-index: 21;
+  z-index: 105;
   box-sizing border-box
   display flex
 

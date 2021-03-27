@@ -35,12 +35,21 @@
       </div>
       <div class="article__info">
         <div class="article__info-item article__info-item_share">
-          <div class="ya-share2" data-curtain data-shape="round" data-limit="3" data-services="vkontakte,facebook,telegram,twitter"></div>
+          <div class="ya-share2" data-curtain data-shape="round" data-limit="3"
+               data-services="vkontakte,facebook,telegram,twitter"></div>
         </div>
         <div class="article__info-item article__info-item_view">{{ views }}</div>
         <div class="article__info-item">{{ time }} мин</div>
       </div>
       <div v-html="page.content.rendered" class="article-content article__content"/>
+      <div v-if="page.acf.source" class="article__source">
+        <div class="article__source-item">
+          Источник
+        </div>
+        <div class="article__source-item">
+          <a :href="page.acf.source" target="_blank" class="article__source-link">{{ page.acf.source }}</a>
+        </div>
+      </div>
       <div class="article__comments">
         <div id="disqus_thread"/>
       </div>
