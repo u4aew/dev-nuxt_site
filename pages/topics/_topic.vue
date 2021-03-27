@@ -26,34 +26,48 @@
         Данные отсутствуют
       </template>
     </div>
+    <div v-if="total > 1" class="topic__pagination">
+      <Pagination :url="`/topics/${slug}`" :value="current" :pageCount="total"/>
+    </div>
   </article>
 </template>
 
 <script>
-
+import paginationSettings from "@/const/pagination";
 import ArticlePreview from "@/components/articles/ArticlePreview";
 import SocialHead from "@/components/social/SocialHead";
+import Pagination from "@/components/pagination/Pagination";
 
 export default {
   loading: true,
   components: {
     ArticlePreview,
-    SocialHead
+    SocialHead,
+    Pagination
   },
-  async asyncData({store, $axios, env, route}) {
+  data() {
+    return {posts: []}
+  },
+  watchQuery: true,
+  async asyncData({$axios, env, route, $nuxt}) {
     const slug = route.params.topic
+    const current = route.query.page || 1
     const categories = await $axios.$get(`${env.apiUrl}/categories`, {
       params: {
         slug
       }
     });
     const category = categories[0]
-    const posts = await $axios.$get(`${env.apiUrl}/posts`, {
+    const response = await $axios.get(`${env.apiUrl}/posts`, {
       params: {
-        categories: category.id
+        categories: category.id,
+        per_page: paginationSettings.perPage,
+        page: current
       }
     });
-    return {category, posts}
+    const total = response.headers['x-wp-totalpages']
+    const posts = response.data
+    return {category, posts, total, current, slug}
   },
   head() {
     return {
