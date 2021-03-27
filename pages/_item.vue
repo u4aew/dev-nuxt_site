@@ -1,5 +1,6 @@
 <template>
   <div class="article">
+    <SocialHead :title="page.title.rendered" :description="page.acf.seo_desc" :image="imgCover"/>
     <div class="article__main">
       <div class="article__informer">
         <div class="article-informer">
@@ -39,13 +40,17 @@
         <div class="article__info-item article__info-item_view">{{ views }}</div>
         <div class="article__info-item">{{ time }} мин</div>
       </div>
-      <div v-html="page.content.rendered" class="article-content article__content"/>
+      <article v-html="page.content.rendered" class="article-content article__content"/>
       <div v-if="page.acf.source" class="article__source">
         <div class="article__source-item">
           Источник
         </div>
         <div class="article__source-item">
-          <a :href="page.acf.source" target="_blank" class="article__source-link">{{ page.acf.source }}</a>
+          <noindex>
+            <a rel=”nofollow” :href="page.acf.source" target="_blank" class="article__source-link">{{
+                page.acf.source
+              }}</a>
+          </noindex>
         </div>
       </div>
       <div class="article__comments">
@@ -57,9 +62,14 @@
 
 <script>
 
+import SocialHead from "@/components/social/SocialHead";
+
 export default {
   loading: true,
-  async asyncData({store, $axios, env, route, error}) {
+  components: {
+    SocialHead
+  },
+  async asyncData({store, $axios, env, route, error, ctx}) {
     const slug = route.params.item
     const posts = await $axios.$get(`${env.apiUrl}/posts`, {
       params: {
@@ -72,7 +82,6 @@ export default {
     } else {
       error({statusCode: 404})
     }
-
     return {page}
   },
   head() {
@@ -83,7 +92,7 @@ export default {
           src: "https://yastatic.net/share2/share.js",
           async: true
         },
-      ]
+      ],
     }
   },
   methods: {

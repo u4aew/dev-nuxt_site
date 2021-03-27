@@ -1,5 +1,5 @@
 <template>
-  <div class="footer block">
+  <footer class="footer block">
     <div class="footer__wrapper block-wrapper">
       <div class="footer__major">
         <div class="footer__cols">
@@ -68,7 +68,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

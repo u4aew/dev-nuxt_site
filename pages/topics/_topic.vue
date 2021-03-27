@@ -1,5 +1,6 @@
 <template>
   <div class="topic">
+    <SocialHead :title="category.name"/>
     <div class="topic__side">
       <div class="topic-header">
         <div class="topic-header__wrapper">
@@ -11,7 +12,7 @@
           <div class="topic-header__side">
             <div class="topic-header__actions">
               <div class="topic-header__actions-item is-active">Все</div>
-<!--              <div class="topic-header__actions-item">Лучшее за неделю</div>-->
+              <!--              <div class="topic-header__actions-item">Лучшее за неделю</div>-->
             </div>
           </div>
         </div>
@@ -31,11 +32,13 @@
 <script>
 
 import ArticlePreview from "@/components/articles/ArticlePreview";
+import SocialHead from "@/components/social/SocialHead";
 
 export default {
   loading: true,
   components: {
-    ArticlePreview
+    ArticlePreview,
+    SocialHead
   },
   async asyncData({store, $axios, env, route}) {
     const slug = route.params.topic
@@ -55,14 +58,7 @@ export default {
   head() {
     return {
       title: this.category.name,
-      meta: [
-        // // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        // {
-        //   hid: 'description',
-        //   name: 'description',
-        //   content: 'My custom description'
-        // }
-      ]
+      meta: []
     }
   },
   mounted() {

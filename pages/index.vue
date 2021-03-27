@@ -1,5 +1,6 @@
 <template>
   <div class="topic">
+    <SocialHead title="TM - Интернет журнал, новости, технологии, здоровье, кино"/>
     <div class="topic__side">
       <div class="topic-header">
         <div class="topic-header__wrapper">
@@ -29,6 +30,7 @@
 
 <script>
 import ArticlePreview from "@/components/articles/ArticlePreview";
+import SocialHead from "@/components/social/SocialHead";
 
 export default {
   loading: true,
@@ -45,7 +47,8 @@ export default {
     }
   },
   components: {
-    ArticlePreview
+    ArticlePreview,
+    SocialHead
   }
 }
 </script>

@@ -52,7 +52,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/moment',
-    '@nuxtjs/yandex-metrika'
+    '@nuxtjs/yandex-metrika',
   ],
   buildModules: [
     '@/modules/generator',

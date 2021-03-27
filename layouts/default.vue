@@ -5,17 +5,17 @@
         <Header/>
       </div>
       <div class="app-body__content">
-        <div class="app-content">
+        <aside class="app-content">
           <div class="app-content__sidebar">
             <Categories/>
           </div>
-          <div class="app-content__main">
+          <main class="app-content__main">
             <nuxt/>
-          </div>
-          <div class="app-content__additional">
+          </main>
+          <aside class="app-content__additional">
             <WidgetNew/>
-          </div>
-        </div>
+          </aside>
+        </aside>
       </div>
       <div class="app-body__footer">
         <Footer/>

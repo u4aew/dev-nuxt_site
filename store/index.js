@@ -20,7 +20,7 @@ export const actions = {
     const categories = await $axios.$get(`${env.apiUrl}/categories`);
     commit('SET_CATEGORIES', categories)
 
-    const news = await $axios.$get(`${env.apiUrl}/posts?perPage=5`);
+    const news = await $axios.$get(`${env.apiUrl}/posts?per_page=5`);
     commit('SET_LAST_NEWS', news)
   },
   SET_MENU_OPEN(context, value) {
