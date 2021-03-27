@@ -1,5 +1,5 @@
 const paginationSettings = {
-  perPage: 1
+  perPage: 10
 }
 
 export default paginationSettings
