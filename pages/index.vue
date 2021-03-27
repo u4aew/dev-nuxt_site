@@ -25,7 +25,7 @@
         Данные отсутствуют
       </template>
     </div>
-    <div class="topic__pagination">
+    <div  v-if="total > 1" class="topic__pagination">
       <Pagination :value="current" :page-count="total"/>
     </div>
   </article>
