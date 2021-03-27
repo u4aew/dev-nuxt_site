@@ -3,6 +3,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'ru'
+    },
     title: 'TM - Интернет журнал, новости, технологии, здоровье, кино',
     meta: [
       {charset: 'utf-8'},
