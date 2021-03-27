@@ -60,6 +60,7 @@ module.exports = {
   buildModules: [
     '@/modules/generator',
     '@nuxtjs/moment',
+    '@nuxtjs/pwa',
   ],
   css: [
     'normalize.css/normalize.css'

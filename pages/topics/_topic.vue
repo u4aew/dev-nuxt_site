@@ -1,5 +1,5 @@
 <template>
-  <div class="topic">
+  <article class="topic">
     <SocialHead :title="category.name"/>
     <div class="topic__side">
       <div class="topic-header">
@@ -26,7 +26,7 @@
         Данные отсутствуют
       </template>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

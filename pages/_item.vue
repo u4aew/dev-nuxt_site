@@ -34,8 +34,8 @@
       </div>
       <div class="article__info">
         <div class="article__info-item article__info-item_share">
-          <div class="ya-share2" data-curtain data-shape="round" data-limit="3"
-               data-services="vkontakte,facebook,telegram,twitter"></div>
+          <Share v-if="showShares"/>
+          <div v-else @click="showShare" class="article__share"></div>
         </div>
         <div class="article__info-item article__info-item_view">{{ views }}</div>
         <div class="article__info-item">{{ time }} мин</div>
@@ -54,7 +54,10 @@
         </div>
       </div>
       <div class="article__comments">
-        <div id="disqus_thread"/>
+        <Comments v-if="showComments"/>
+        <div v-else @click="showComment" class="article__comments-action">
+          Показать комментарии
+        </div>
       </div>
     </div>
   </div>
@@ -63,11 +66,21 @@
 <script>
 
 import SocialHead from "@/components/social/SocialHead";
+import Comments from "@/components/comments/Comments";
+import Share from "@/components/share/Share";
 
 export default {
   loading: true,
   components: {
-    SocialHead
+    SocialHead,
+    Comments,
+    Share
+  },
+  data() {
+    return {
+      showComments: false,
+      showShares: false
+    }
   },
   async asyncData({store, $axios, env, route, error, ctx}) {
     const slug = route.params.item
@@ -86,16 +99,16 @@ export default {
   },
   head() {
     return {
-      title: this.page.title.rendered,
-      script: [
-        {
-          src: "https://yastatic.net/share2/share.js",
-          async: true
-        },
-      ],
+      title: this.page.title.rendered
     }
   },
   methods: {
+    showComment() {
+      this.showComments = true
+    },
+    showShare() {
+      this.showShares = true
+    },
     getNameCategoryById(id) {
       return this.$store.state.categories.find((item) => item.id === id).name
     },
@@ -123,18 +136,10 @@ export default {
   },
   mounted() {
     this.loading = false
-    setComment()
+
   }
 }
 
-const setComment = () => {
-  (function () { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://the-magazine-ru.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-}
 
 const getRandomIntInclusive = (min, max) => {
   min = Math.ceil(min);

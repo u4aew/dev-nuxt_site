@@ -14,3 +14,4 @@ npm-debug.log
 dist
 # Alias for idea
 webpack.config.js
+sw.*

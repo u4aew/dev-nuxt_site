@@ -1,5 +1,5 @@
 <template>
-  <div class="topic">
+  <article class="topic">
     <SocialHead title="TM - Интернет журнал, новости, технологии, здоровье, кино"/>
     <div class="topic__side">
       <div class="topic-header">
@@ -25,7 +25,7 @@
         Данные отсутствуют
       </template>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

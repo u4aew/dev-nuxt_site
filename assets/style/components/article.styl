@@ -142,6 +142,22 @@
 
   }
 
+  &__share {
+    width 24px
+    height 24px
+    background-color #f7f7f7
+    border-radius 50%
+    background-image url('assets/images/ui/share.svg')
+    background-size 50%
+    background-repeat no-repeat
+    background-position center
+    cursor pointer
+
+    &:hover {
+      opacity 0.8
+    }
+  }
+
   &__source {
     use-size(12)
     color $color-4
@@ -149,9 +165,11 @@
     align-items center
     margin 0 -5px
     justify-content flex-end
+
     &-item {
       margin 0 5px
     }
+
     &-link {
       display block
       color $color-4
@@ -161,12 +179,30 @@
       text-overflow ellipsis
     }
   }
+
   &__comments {
     margin-bottom 20px
   }
 
   &__content {
     margin-bottom 30px
+  }
+
+  &__comments {
+    &-action {
+      padding 10px 15px
+      border 1px solid $color-primary
+      border-radius 15px
+      margin 15px 0 30px 0
+      box-sizing border-box
+      color $color-primary
+      text-align center
+      cursor pointer
+
+      &:hover {
+        opacity 0.8
+      }
+    }
   }
 
   &__info {
@@ -179,6 +215,7 @@
 
     &-item {
       margin 0 5px
+      min-height 24px
 
       &_view {
         margin-left auto
