@@ -27,9 +27,7 @@
           </div>
         </div>
       </div>
-      <h1 class="article__title">
-        {{ page.title.rendered }}
-      </h1>
+      <h1 class="article__title" v-html="page.title.rendered"/>
       <div v-if="imgCover" class="article__img">
         <img :src="imgCover">
       </div>

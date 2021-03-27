@@ -61,6 +61,9 @@ module.exports = {
   css: [
     'normalize.css/normalize.css'
   ],
+  router: {
+    middleware: 'trailingSlashRedirect',
+  },
   sitemap: {
     hostname: 'https://the-magazine.ru',
     gzip: true,

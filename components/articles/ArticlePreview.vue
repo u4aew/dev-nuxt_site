@@ -6,10 +6,7 @@
           {{ getNameCategoryById(item) }}
         </div>
       </div>
-      <h2 class="article-preview__title">
-        {{ content.title.rendered }}
-      </h2>
-
+      <h2 class="article-preview__title" v-html="content.title.rendered "/>
       <div class="article-preview__desc" v-html="content.excerpt.rendered"/>
       <div v-if="imgCover" class="article-preview__img">
         <img :src="imgCover">
