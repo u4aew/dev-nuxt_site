@@ -83,8 +83,8 @@ module.exports = {
   },
   yandexMetrika: {
     id: '74632201',
-    webvisor: true,
-    clickmap: true,
+    webvisor: false,
+    clickmap: false,
     useCDN: false,
     trackLinks: true,
     accurateTrackBounce: true,
